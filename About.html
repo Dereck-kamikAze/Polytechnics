@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <aside id="sidebar" class="hidden">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div id="main-content">
+            <header>
+                <button id="sidebar-toggle">☰</button>
+                <h1>About Us</h1>
+            </header>
+            <main>
+                <div class="summary">
+                    <h2>About Our Project</h2>
+                    <p>This website is designed to scrape and monitor job vacancies, providing an easy and efficient way to keep track of available opportunities. The idea for this project was conceived by Dereck Lebon and Sarvesh Jowata, who saw a need for a streamlined approach to job searching. The Recruiting module on Dayforce, the application both are working on in their current job, has inspired them a lot.</p>
+                </div>
+                <div class="person-info">
+                    <div class="person-profile">
+                        <img src="dereck.jpg" alt="Dereck Lebon">
+                        <div class="info">
+                            <h3>Dereck Kenneth Emanuel Lebon</h3>
+                            <p>Project Owner</p>
+                            <p>Email: dlebon.student2020@poly.ac.mu</p>
+                            <p>Contact Number: +230 5702 0995</p>
+                            <p>Dereck is a dedicated professional with a passion for creating efficient and user-friendly applications.</p>
+                        </div>
+                    </div>
+                    <div class="person-profile">
+                        <img src="sarvesh.jpg" alt="Sarvesh Jowata">
+                        <div class="info">
+                            <h3>Sarvesh Jowata</h3>
+                            <p>Project Owner</p>
+                            <p>Email: sjowata.student2020@poly.ac.mu</p>
+                            <p>Contact Number: +230 5824 8852</p>
+                            <p>Sarvesh is an innovative thinker who brings fresh ideas and perspectives to the project.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="feedback-form">
+                    <form id="feedback-form">
+                        <h3>Send us your feedback</h3>
+                        <label for="first-name">First Name:</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                        <label for="last-name">Last Name:</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                        <label for="email">Email Address:</label>
+                        <input type="email" id="email" name="email" required>
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" required></textarea>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="contact" name="contact">
+                            <label for="contact">Give Permission to contact to seek more feedback.</label>
+                        </div>
+                        <button type="submit">Submit Feedback</button>
+                    </form>
+                </div>
+            </main>
+            <footer>
+                <p>Last updated on June 29, 2024. Created by Dereck Lebon and Sarvesh Jowata.</p>
+            </footer>
+            <button id="theme-toggle">Toggle Dark/Light Mode</button>
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+</body>
+</html>

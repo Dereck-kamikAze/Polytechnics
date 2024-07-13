@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <aside id="sidebar" class="hidden">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div id="main-content">
+            <header>
+                <button id="sidebar-toggle">☰</button>
+                <h1>Dashboard</h1>
+            </header>
+            <main>
+                <div class="upload-container">
+                    <input type="file" id="excel-file-input" accept=".xlsx">
+                </div>
+                <table id="job-listings">
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Company Name</th>
+                            <th>Location</th>
+                            <th>Salary</th>
+                            <th>Created Date</th>
+                            <th>Closing Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Jobs will be dynamically inserted here -->
+                    </tbody>
+                </table>
+            </main>
+            <footer>
+                <p>Last updated on June 29, 2024. Created by Dereck Lebon and Sarvesh Jowata.</p>
+            </footer>
+            <button id="theme-toggle">Toggle Dark/Light Mode</button>
+        </div>
+    </div>
+</body>
+</html>

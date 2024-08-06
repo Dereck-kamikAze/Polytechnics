@@ -7,11 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const searchForm = document.getElementById('search-form');
     let jobData = [];
 
+    // Dark Mode toggle on all pages
     themeToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
         document.body.style.transition = 'background-color 0.5s ease, color 0.5s ease';
     });
 
+    // Side Bar toggle on all pages
     sidebarToggle.addEventListener('click', () => {
         const isVisible = sidebar.classList.toggle('visible');
         if (isVisible) {
@@ -25,6 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Import file trigger
     if (fileInput) {
         fileInput.addEventListener('change', function(event) {
             const file = event.target.files[0];
@@ -74,6 +77,26 @@ document.addEventListener('DOMContentLoaded', function() {
                             <td>${job['Created Date'] || ''}</td>
                             <td>${job['Closing Date'] || ''}</td>`;
             tbody.appendChild(tr);
+        });
+    }
+
+    // EmailJS integration for the feedback form
+    const feedbackForm = document.getElementById('feedback-form');
+    if (feedbackForm) {
+        feedbackForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const serviceID = 'service_s1jnlwq';
+            const templateID = 'template_3jvcw6d';
+
+            emailjs.sendForm(serviceID, templateID, feedbackForm)
+                .then(function(response) {
+                    alert('Feedback sent successfully!');
+                    feedbackForm.reset();
+                }, function(error) {
+                    console.error('Failed to send feedback', error);
+                    alert('Failed to send feedback. Please try again later. Error: ' + JSON.stringify(error));
+                });
         });
     }
 });

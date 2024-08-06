@@ -4,8 +4,8 @@ body, html {
     padding: 0;
     height: 100%;
     overflow: hidden;
-    background-color: #f5f5f5; /* Light grey background */
-    transition: background-color 0.5s ease, color 0.5s ease; /* Gradual transition for dark mode */
+    background-color: #f5f5f5;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 #container {
@@ -112,7 +112,7 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    min-height: calc(100vh - 160px); /* Adjust for header and footer */
+    min-height: calc(100vh - 160px);
     overflow-y: auto;
 }
 
@@ -191,8 +191,8 @@ th {
 }
 
 .person-profile img {
-    width: 150px; /* Increased size */
-    height: 150px; /* Increased size */
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
@@ -230,7 +230,7 @@ footer {
 .dark-mode {
     background-color: #121212;
     color: #e0e0e0;
-    transition: background-color 0.5s ease, color 0.5s ease; /* Gradual transition for dark mode */
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .dark-mode header, .dark-mode footer {
@@ -255,4 +255,19 @@ footer {
     .person-profile, .feedback-form, .summary {
         width: 100%;
     }
+}
+
+#powerbi-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 160px); /* Adjusted to take up the full page minus header and footer */
+    width: 100%;  /* Ensure it takes the full width */
+    padding: 0;
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
 }

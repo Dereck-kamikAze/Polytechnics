@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Vacancy Scraper</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <aside id="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="dashboard.html">Dashboard</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <div id="main-content">
+            <header>
+                <button id="sidebar-toggle">☰</button>
+                <h1>Job Vacancy Scraper</h1>
+            </header>
+            <main>
+                <div class="welcome-message">
+                    <h2>Welcome to the Job Vacancy Scraper</h2>
+                    <p>Our platform helps you find the best job opportunities quickly and easily. Use the search form below to find jobs that match your criteria.</p>
+                </div>
+                <div class="search-container">
+                    <form id="search-form">
+                        <input type="text" id="job-title" name="job-title" placeholder="Job Title">
+                        <input type="text" id="job-location" name="job-location" placeholder="Job Location">
+                        <input type="text" id="salary" name="salary" placeholder="Salary">
+                        <input type="text" id="company" name="company" placeholder="company">
+                        <button type="submit">Search</button>
+                    </form>
+                </div>
+                <div class="job-results">
+                    <table id="job-listings">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Company</th>
+                                <th>Location</th>
+                                <th>Salary</th>
+                                <th>Created Date</th>
+                                <th>Closing Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Job results will be appended here -->
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+            <footer>
+                <p>Last updated on August 6, 2024. Created by Dereck Lebon and Sarvesh Jowata.</p>
+            </footer>
+            <button id="theme-toggle">Toggle Dark/Light Mode</button>
+        </div>
+    </div>
+</body>
+</html>
